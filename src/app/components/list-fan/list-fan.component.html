@@ -1,0 +1,8 @@
+<p>list-fan works!</p>
+<ul>
+    <li *ngFor="let fan of fans">
+        <a [routerLink]="'/details/'+fan.id">
+            <div>{{fan.firstname}} {{fan.lastname}}</div>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,10 @@
+<ng-container *ngIf="fan">
+    <h1>{{fan.lastname}} {{fan.firstname}}</h1>
+    <h3>{{fan.birthdate | date:'dd-MM-yyyy'}}</h3>
+    <ul>
+        <li *ngFor="let title of fan.series">
+            {{title}}
+        </li>
+    </ul>
+</ng-container>
+<a routerLink = ''>Revenir à la liste de fans</a>
