@@ -23,4 +23,11 @@ export class FanMockupService {
     if(filteredFanList.length <= 0) throw new Error(`Le fan avec l'identifiant ${id} n'existe pas`);
     return filteredFanList[0];
   }
+
+  public Insert(entity : IFan) : number{
+    let idMax = Math.max(...this.Fans.map(f => f.id));
+    entity.id = idMax + 1;
+    this._fans.push(entity);
+    return entity.id;
+  }
 }

@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FanUpdateComponent } from './components/fan-update/fan-update.component';
 import { FanCreateComponent } from './components/fan-create/fan-create.component';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,9 @@ import { FanDetailsComponent } from './components/fan-details/fan-details.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

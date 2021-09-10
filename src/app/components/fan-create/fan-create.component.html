@@ -1,1 +1,7 @@
 <p>fan-create works!</p>
+<form [formGroup]="createForm" (ngSubmit)="submitFan()">
+    <div><label for="fn">Prénom : </label><input type="text" name="fn" formControlName="firstname"></div>
+    <div><label for="ln">Nom : </label><input type="text" name="ln" formControlName="lastname"></div>
+    <div><label for="bd">Date de naissance : </label><input type="date" name="bd" formControlName="birthdate"></div>
+    <input type="submit" value="Enregister">
+</form>
