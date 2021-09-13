@@ -1,3 +1,4 @@
+import { yearsOldValidator } from 'src/app/validators/yearsold.validator';
 import { Router } from '@angular/router';
 import { Fan } from './../../models/fan';
 import { FanMockupService } from './../../services/fan-mockup.service';
@@ -23,7 +24,7 @@ export class FanCreateComponent implements OnInit {
     this.createForm = this._formBuilder.group({
       firstname : [null,Validators.required],
       lastname : [null,Validators.required],
-      birthdate : [null,Validators.required],
+      birthdate : [null,[Validators.required, yearsOldValidator(13)]],
       series : this._formBuilder.array([])
     });
   }
