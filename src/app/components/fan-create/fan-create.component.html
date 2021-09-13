@@ -3,5 +3,12 @@
     <div><label for="fn">Prénom : </label><input type="text" name="fn" formControlName="firstname"></div>
     <div><label for="ln">Nom : </label><input type="text" name="ln" formControlName="lastname"></div>
     <div><label for="bd">Date de naissance : </label><input type="date" name="bd" formControlName="birthdate"></div>
+    <div formArrayName="series">
+        <input type="button" value="+" (click)="addSerieInput()">
+        <div *ngFor="let control of createFormSeriesArray.controls; let i = index">
+            <label for="serie_{{i}}">Série {{i+1}}: </label>
+            <input type="text" name="serie_{{i}}" [formControlName]="i">
+        </div>
+    </div>
     <input type="submit" value="Enregister">
 </form>
